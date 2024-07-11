@@ -1,0 +1,9 @@
+.lottie {
+  flex-basis: 40%;
+  max-width: 40%;
+
+  @media screen and (max-width: 480px) {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}

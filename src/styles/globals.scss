@@ -1,0 +1,25 @@
+@import './variables';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  max-width: 100vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  color: #FFFBE9;
+  background-color: $bg;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

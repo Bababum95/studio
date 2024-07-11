@@ -1,0 +1,275 @@
+@import "./_mixins", "./_variables";
+
+.main {
+  padding: 0 40px;
+}
+
+.welcome {
+  margin: 10vw auto 2.5vw auto;
+  max-width: 80%;
+}
+
+.h1 {
+  font-family: Arial;
+  font-size: clamp(5.25rem, 3rem + 2.5vw, 6rem);
+  font-weight: 400;
+  line-height: 115%;
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.description {
+  @include text-l;
+  color: $hint;
+}
+
+.video {
+  display: block;
+  padding-top: 8vw;
+  height: auto;
+  width: 100%;
+}
+
+.section {
+  max-width: 80%;
+  margin: 0 auto 16vw;
+  padding-top: 8vw;
+}
+
+.h2 {
+  @include text-l;
+  text-align: left;
+  color: $hint;
+  margin: 1.25em 0 1.75em;
+}
+
+.text {
+  @include text-l;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 7vw 0;
+  gap: 18px;
+  padding: 0 10px;
+}
+
+.stage {
+  width: calc(50% - 10px);
+  font-size: clamp(1.25rem, 1.1817rem + 0.2572vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1;
+  color: $hint;
+}
+
+.images {
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  margin-inline: -15px;
+  padding: 8vw 0;
+  display: flex;
+  position: relative;
+
+  img {
+    flex-basis: 40%;
+    max-width: 40%;
+    height: auto;
+    object-fit: contain;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: inline-block;
+
+    &.horizontal {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+  }
+}
+
+.process {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 100vh;
+}
+
+.wrapper {
+  flex-basis: 40%;
+  max-width: 40%;
+}
+
+.counter {
+  @include text-l;
+  color: $hint;
+}
+
+.h3 {
+  font-size: clamp(2.25rem, 0.75rem + 1.875vw, 3rem);
+  font-weight: 400;
+  line-height: 115%;
+  text-align: left;
+  margin: 24px 0;
+}
+
+.m {
+  @include text-m;
+}
+
+.results {
+  min-height: 100vh;
+  width: 66%;
+  margin: 0 auto;
+
+  &-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .wrapper {
+    flex-basis: 45%;
+    max-width: 45%;
+    margin-top: 60px;
+  }
+
+  .h3 {
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+}
+
+.helps {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0 0 8vw;
+}
+
+.help {
+  flex-basis: 45%;
+  max-width: 45%;
+  position: relative;
+
+  img {
+    max-width: 100%;
+    object-fit: cover;
+    filter: brightness(0.55);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .welcome,
+  .section {
+    max-width: 940px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .h1 {
+    font-size: clamp(3rem, -3.75rem + 14.0625vw, 5.25rem);
+  }
+
+  .process {
+    justify-content: space-between;
+  }
+
+  .wrapper {
+    flex-basis: calc(50% - 25px);
+    max-width: calc(50% - 25px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .welcome {
+    max-width: 568px;
+  }
+
+  .results {
+    width: 100%;
+    max-width: 568px;
+  }
+
+  .helps {
+    flex-direction: column;
+    gap: 70px;
+  }
+
+  .help {
+    flex-basis: 0;
+    max-width: 100%;
+
+    img {
+      max-height: 450px;
+      object-position: bottom;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .video {
+    @include full-page;
+  }
+
+  .h2 {
+    font-size: 24px;
+  }
+
+  .list {
+    margin-top: 50px;
+    gap: 24px;
+  }
+
+  .stage {
+    width: 100%;
+  }
+
+  .images {
+    margin-inline: 0;
+    gap: 88px;
+
+    img {
+      flex-basis: 100%;
+      max-width: 100%;
+      padding-inline: 0;
+
+      &.horizontal {
+        @include full-page;
+        flex-basis: 100vw;
+        max-width: 100vw;
+      }
+    }
+  }
+
+  .process {
+    flex-wrap: wrap;
+  }
+
+  .wrapper {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .results {
+    &-wrapper {
+      flex-wrap: wrap;
+    }
+    .wrapper {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .help {
+    
+    img {
+      @include full-page;
+      max-width: 100vw;
+      max-height: 377px;
+    }
+  }
+}
