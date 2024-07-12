@@ -60,6 +60,14 @@ const Header: FC<Props> = ({ children, logo }) => {
     };
   }, []);
 
+  useEffect(() => {
+    if (isOpen.menu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [isOpen.menu]);
+
   return (
     <motion.header className={styles.header} style={{ y }}>
       <Image
@@ -103,6 +111,20 @@ const Header: FC<Props> = ({ children, logo }) => {
           <button className={styles.button} onClick={closeMenu}>
             {t("close")}
           </button>
+          <div className={styles.socials}>
+            <a className={styles.link} href="#">
+              Whatsapp
+            </a>
+            <a className={styles.link} href="#">
+              Telegram
+            </a>
+            <a className={styles.link} href="#">
+              Instagram
+            </a>
+            <a className={styles.link} href="#">
+              Linkedin
+            </a>
+          </div>
         </div>
       </div>
     </motion.header>

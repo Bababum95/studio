@@ -80,6 +80,10 @@
   align-items: center;
 }
 
+.socials {
+  display: none;
+}
+
 @media screen and (max-width: 1124px) {
   .overlay.open {
     display: block;
@@ -146,5 +150,28 @@
     flex-direction: row;
     max-width: 36px;
   }
-}
 
+  .socials {
+    position: absolute;
+    bottom: 92px;
+    left: 46px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .link {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.4px;
+    letter-spacing: -0.025em;
+    text-align: left;
+  }
+
+  @media screen and (max-height: 700px) {
+    .socials {
+      display: none;
+    }
+  }
+}
