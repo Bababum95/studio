@@ -22,6 +22,7 @@ export const stages = [
 "product-management",
 "legal-and-hr"
 ];
+export const links = ["what-we-do", "how-we-do-it", "investors", "faq", "contacts"];
 
 export const stageSections = [
     {

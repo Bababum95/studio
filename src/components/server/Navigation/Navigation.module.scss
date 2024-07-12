@@ -6,6 +6,30 @@
   margin-right: 108px;
 }
 
+.link {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #FFFBE9;
+  transition: border-color 0.2s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      border-color: #FFFBE9;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      border-color: #FFFBE9;
+    }
+  }
+}
+
 @media screen and (max-width: 1124px) {
   .navigation {
     order: 2;
@@ -21,5 +45,17 @@
     line-height: 42px;
     text-align: left;
     color: #252423;
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: #252423;
+      }
+    }
+
+    @media (hover: none) {
+      &:active {
+        border-color: #252423;
+      }
+    }
   }
 }

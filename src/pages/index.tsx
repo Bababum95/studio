@@ -4,9 +4,10 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { stages, stageSections } from "@public/data";
-import { Navigation, SEO } from "@/components";
+import { FAQ, Footer, Navigation, SEO } from "@/components";
 
 import styles from "@/styles/Home.module.scss";
+import classNames from "classnames";
 
 const LottieAnimation = dynamic(
   () => import("@/components/LottieAnimation/LottieAnimation"),
@@ -57,10 +58,7 @@ export default function Home() {
             data-object-fit="cover"
             className={styles.video}
           >
-            <source
-              src="/videos/video-bg.webm"
-              data-wf-ignore="true"
-            />
+            <source src="/videos/video-bg.webm" data-wf-ignore="true" />
           </video>
         </MotionSection>
         <MotionSection id="what-we-do">
@@ -151,6 +149,26 @@ export default function Home() {
           <h2 className={styles.h2}>{t("help")}</h2>
           <div className={styles.helps}>
             <div className={styles.help}>
+              <div className={styles["help-wrapper"]}>
+                <h3 className={styles["help-h3"]}>{t("investor")}</h3>
+                <p className={styles["help-text"]}>{t("investor-text")}</p>
+                <ul className={styles["help-list"]}>
+                  {Array(5)
+                    .fill(0)
+                    .map((_, index) => (
+                      <li className={styles["help-item"]} key={index}>
+                        - {t(`investor-item-${index + 1}`)}
+                      </li>
+                    ))}
+                </ul>
+                <Image
+                  src="/svg/logo.svg"
+                  alt="office"
+                  className={styles["help-logo"]}
+                  width={120}
+                  height={48}
+                />
+              </div>
               <Image
                 src="/images/city.jpeg"
                 alt="city"
@@ -159,6 +177,26 @@ export default function Home() {
               />
             </div>
             <div className={styles.help}>
+              <div className={styles["help-wrapper"]}>
+                <h3 className={styles["help-h3"]}>{t("idea-or-startup")}</h3>
+                <p className={styles["help-text"]}>{t("startup-text")}</p>
+                <ul className={styles["help-list"]}>
+                  {Array(5)
+                    .fill(0)
+                    .map((_, index) => (
+                      <li className={styles["help-item"]} key={index}>
+                        - {t(`startup-item-${index + 1}`)}
+                      </li>
+                    ))}
+                </ul>
+                <Image
+                  src="/svg/logo.svg"
+                  alt="office"
+                  className={styles["help-logo"]}
+                  width={120}
+                  height={48}
+                />
+              </div>
               <Image
                 src="/images/office.jpeg"
                 alt="office"
@@ -168,7 +206,14 @@ export default function Home() {
             </div>
           </div>
         </MotionSection>
+        <MotionSection id="faq">
+          <h2 className={classNames(styles.h2, styles.faq)}>
+            {t("faq-title")}
+          </h2>
+          <FAQ />
+        </MotionSection>
       </main>
+      <Footer />
     </>
   );
 }

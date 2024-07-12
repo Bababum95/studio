@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
+import { links } from "@public/data";
+
 import styles from "./Navigation.module.scss";
 
-const links = ["what-we-do", "how-we-do-it", "investors", "faq", "contacts"];
 
 export const Navigation = () => {
   const { t } = useTranslation("common");

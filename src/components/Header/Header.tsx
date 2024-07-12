@@ -2,6 +2,7 @@
 import { FC, useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
+import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import classNames from "classnames";
 
@@ -21,11 +22,26 @@ const Header: FC<Props> = ({ children, logo }) => {
     menu: false,
     lang: false,
   });
+  const { scrollY } = useScroll();
+  const scrollYBounded = useMotionValue(0);
 
-  const handleLangClick = (lang: string) => {
+  const y = useTransform(scrollYBounded, [0, 100], [0, -100]);
+
+  useEffect(() => {
+    return scrollY.on("change", (current) => {
+      const previous = scrollY.getPrevious();
+      const diff = current - Number(previous);
+      const newValue = Math.min(Math.max(0, scrollYBounded.get() + diff), 100);
+      scrollYBounded.set(newValue);
+    });
+  }, [scrollY, scrollYBounded]);
+
+  const handleLangClick = async (lang: string) => {
     if (isOpen.lang) {
-      i18n.changeLanguage(lang);
-      router.push(router.pathname, router.asPath, { locale: lang });
+      const cleanPathname = router.pathname.split("#")[0];
+      const cleanAsPath = router.asPath.split("#")[0];
+      await i18n.changeLanguage(lang);
+      router.push(cleanPathname, cleanAsPath, { locale: lang });
       setIsOpen({ menu: false, lang: false });
     } else {
       setIsOpen({ ...isOpen, lang: true });
@@ -45,7 +61,7 @@ const Header: FC<Props> = ({ children, logo }) => {
   }, []);
 
   return (
-    <header className={styles.header}>
+    <motion.header className={styles.header} style={{ y }}>
       <Image
         className={styles.logo}
         src={logo}
@@ -89,7 +105,7 @@ const Header: FC<Props> = ({ children, logo }) => {
           </button>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 
