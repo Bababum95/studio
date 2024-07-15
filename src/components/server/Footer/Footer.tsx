@@ -19,7 +19,7 @@ export const Footer = () => {
           width={250}
           height={100}
         />
-        <span className={styles.span}> &gt;</span>
+        <span className={styles.span}>{t("discuss-project")} &gt;</span>
       </div>
       <nav className={styles.navigation}>
         <div className={styles.column}>
