@@ -162,7 +162,7 @@
     object-fit: cover;
 
     &:not(.help-logo) {
-      filter: brightness(0.55)
+      filter: brightness(0.55);
     }
   }
 
@@ -339,8 +339,11 @@
     }
   }
 
-  .help {
+  .order {
+    order: -1;
+  }
 
+  .help {
     &-wrapper {
       @include full-page;
       padding: 24px;
@@ -368,5 +371,11 @@
       max-width: 100vw;
       max-height: 377px;
     }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .h1 {
+    overflow-wrap: break-word;
   }
 }

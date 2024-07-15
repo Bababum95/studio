@@ -138,6 +138,7 @@ export default function Home() {
               height={585}
             />
             <Image
+              className={styles.order}
               src="/images/results-2.jpg"
               alt="results"
               width={753}

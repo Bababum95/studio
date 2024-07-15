@@ -37,21 +37,21 @@ export const FAQ = () => {
             <>
               {t("investor")}:
               <ul>
-                <li>{t("what-benefits-will-i-get-by-partnering-with-you-investor")}.</li>
+                <li>{t("what-benefits-will-i-get-by-partnering-with-you-investor")}</li>
               </ul>
               {t("startup")}:
               <ul>
-                <li>{t("what-benefits-will-i-get-by-partnering-with-you-startup")}.</li>
+                <li>{t("what-benefits-will-i-get-by-partnering-with-you-startup")}</li>
               </ul>
               {t("idea")}:
               <ul>
-                <li>{t("what-benefits-will-i-get-by-partnering-with-you-idea")}.</li>
+                <li>{t("what-benefits-will-i-get-by-partnering-with-you-idea")}</li>
               </ul>
             </>
           }
         />
       </li>
-      {Array.from({ length: 5 }, (_, i) => (
+      {Array.from({ length: 11 }, (_, i) => (
         <li key={i} className={styles.item}>
           <FAQItem
             question={t(`question-${i + 1}`)}
