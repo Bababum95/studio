@@ -30,10 +30,10 @@ export const Footer = () => {
             hello@unite-venture.com
           </a>
           <div className={styles.socials}>
-            <a href="#">
+            <a href="https://t.me/UniteVenture">
               <Image width={24} height={24} src="/svg/tg.svg" alt="telegram" />
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/unite_venture_tm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
               <Image
                 width={24}
                 height={24}
@@ -41,7 +41,7 @@ export const Footer = () => {
                 alt="instagram"
               />
             </a>
-            <a href="#">
+            <a href="https://wa.me/qr/UH5433KVFR7EO1">
               <Image
                 width={24}
                 height={24}
@@ -49,7 +49,7 @@ export const Footer = () => {
                 alt="whatsapp"
               />
             </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/company/unite-venture/mycompany/?viewAsMember=true">
               <Image
                 width={24}
                 height={24}

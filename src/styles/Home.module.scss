@@ -359,11 +359,14 @@
     }
 
     &-list {
-      margin-top: 20px;
+      margin-top: 14px;
     }
 
-    &-item:not(:last-child) {
-      margin-bottom: 2px;
+    &-item {
+      font-size: 18px;
+      &:not(:last-child) {
+        margin-bottom: 2px;
+      }
     }
 
     img:not(.help-logo) {

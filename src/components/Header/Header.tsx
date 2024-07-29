@@ -112,16 +112,22 @@ const Header: FC<Props> = ({ children, logo }) => {
             {t("close")}
           </button>
           <div className={styles.socials}>
-            <a className={styles.link} href="#">
+            <a className={styles.link} href="https://wa.me/qr/UH5433KVFR7EO1">
               Whatsapp
             </a>
-            <a className={styles.link} href="#">
+            <a className={styles.link} href="https://t.me/UniteVenture">
               Telegram
             </a>
-            <a className={styles.link} href="#">
+            <a
+              className={styles.link}
+              href="https://www.instagram.com/unite_venture_tm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            >
               Instagram
             </a>
-            <a className={styles.link} href="#">
+            <a
+              className={styles.link}
+              href="https://www.linkedin.com/company/unite-venture/mycompany/?viewAsMember=true"
+            >
               Linkedin
             </a>
           </div>

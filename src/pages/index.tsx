@@ -14,6 +14,11 @@ const LottieAnimation = dynamic(
   { ssr: false }
 );
 
+const YandexMetrika = dynamic(
+  () => import("@/components/YandexMetrika/YandexMetrika"),
+  { ssr: false }
+);
+
 const MotionSection = dynamic(
   () => import("@/components/MotionSection/MotionSection"),
   { ssr: false }
@@ -40,6 +45,7 @@ export default function Home() {
   return (
     <>
       <SEO />
+      <YandexMetrika />
       <Header logo="/svg/logo.svg">
         <Navigation />
       </Header>
@@ -77,14 +83,14 @@ export default function Home() {
         <MotionSection start={30}>
           <div className={styles.images}>
             <Image
-              src="/images/doing-1.jpg"
+              src="/images/5d970029c39a7ed2ce95fedc_psl-studio-04.jpg"
               alt="doing"
               width={753}
               height={1080}
             />
             <Image
               className={styles.horizontal}
-              src="/images/doing-2.jpg"
+              src="/images/5d938dcfda410f3b068a4b2f_psl-studio-02-p-1080.jpg"
               alt="doing"
               width={908}
               height={585}
@@ -132,14 +138,14 @@ export default function Home() {
           <div className={styles.images}>
             <Image
               className={styles.horizontal}
-              src="/images/results-1.jpg"
+              src="/images/image-19.jpg"
               alt="results"
               width={908}
               height={585}
             />
             <Image
               className={styles.order}
-              src="/images/results-2.jpg"
+              src="/images/image-18.jpg"
               alt="results"
               width={753}
               height={1080}
