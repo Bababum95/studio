@@ -19,7 +19,9 @@ export const Footer = () => {
           width={250}
           height={100}
         />
-        <span className={styles.span}>{t("discuss-project")} &gt;</span>
+        <a className={styles.span} href="mailto:hello@unite-venture.com">
+          {t("discuss-project")} &gt;
+        </a>
       </div>
       <nav className={styles.navigation}>
         <div className={styles.column}>

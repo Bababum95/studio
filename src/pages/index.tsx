@@ -64,7 +64,11 @@ export default function Home() {
             data-object-fit="cover"
             className={styles.video}
           >
-            <source src="/videos/video.mp4" data-wf-ignore="true" />
+            <source
+              src="/videos/video.webm"
+              type="video/webm"
+              data-wf-ignore="true"
+            />
           </video>
         </MotionSection>
         <MotionSection id="what-we-do">
