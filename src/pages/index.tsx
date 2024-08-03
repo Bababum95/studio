@@ -87,14 +87,14 @@ export default function Home() {
         <MotionSection start={30}>
           <div className={styles.images}>
             <Image
-              src="/images/5d970029c39a7ed2ce95fedc_psl-studio-04.jpg"
+              src="/images/Вертикальная 1 блок.jpg"
               alt="doing"
               width={753}
               height={1080}
             />
             <Image
               className={styles.horizontal}
-              src="/images/5d938dcfda410f3b068a4b2f_psl-studio-02-p-1080.jpg"
+              src="/images/Горизонтальная 1 блок.jpg"
               alt="doing"
               width={908}
               height={585}
@@ -142,14 +142,14 @@ export default function Home() {
           <div className={styles.images}>
             <Image
               className={styles.horizontal}
-              src="/images/image-19.jpg"
+              src="/images/image 19.jpg"
               alt="results"
               width={908}
               height={585}
             />
             <Image
               className={styles.order}
-              src="/images/image-18.jpg"
+              src="/images/Вертикальная 2 блок.jpg"
               alt="results"
               width={753}
               height={1080}
